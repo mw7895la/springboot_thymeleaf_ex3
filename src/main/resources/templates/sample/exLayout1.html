@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>fragments Test</h1>
+<div style="border: 1px solid blue">
+    <!-- :: 이 없으면 전체의 내용 반영 //  ~{} 의 틸다는 fragment의 표현이다.-->
+    <th:block th:replace="~{/fragments/fragment2}"></th:block>
+
+</div>
+
+<h1>LayOut 1 - 1</h1>
+<!-- :: 은 해당 fragment의 id 조각 html의  th:fragment부분 -->
+<div th:replace="~{/fragments/fragment1 :: part1}"></div>
+
+<h1>LayOut 1 - 2</h1>
+<div th:insert="~{/fragments/fragment1 :: part2}"></div>
+
+<h1>LayOut 1 - 3</h1>
+<th:block th:replace="~{/fragments/fragment1 :: part3}"> </th:block>
+</body>
+</html>
