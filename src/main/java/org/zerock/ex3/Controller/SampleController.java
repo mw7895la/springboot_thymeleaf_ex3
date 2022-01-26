@@ -65,7 +65,7 @@ public class SampleController {
     }
 
     //thymeleaf의 replace
-    @GetMapping({"/exLayout1","/exLayout2"})
+    @GetMapping({"/exLayout1","/exLayout2","/exTemplate","/exSidebar"})
     public void exLayout1(){
         log.info("exLayout..........");
     }

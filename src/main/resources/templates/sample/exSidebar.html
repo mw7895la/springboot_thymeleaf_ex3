@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<!--/layout/basic .html 의 setContent의 content는 여기의 내용으로 나타낸다-->
+<th:block th:replace="~{/layout/basic:: setContent(~{this::content})}">
+        <th:block th:fragment="content">
+            <h1>exSidebar Page</h1>
+        </th:block>
+
+</th:block>

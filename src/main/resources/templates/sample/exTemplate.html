@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<!--호출 시 layout/layout1.html로 화면을 나타내는데 그 중 content는 여기있는 내용으로 한다.-->
+
+<th:block th:replace="~{/layout/layout1 :: setContent(~{this::content})}">
+
+    <th:block th:fragment="content">
+        <h1>exTemplate page</h1>
+    </th:block>
+</th:block>
